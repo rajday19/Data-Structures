@@ -36,17 +36,27 @@ class LinkedList(object):
     	while current.value!=element:
     		current = current.next
     	current.value = None
-    
+
+    def insert_first(self,new_element):
+    	if self.head:
+    		next = self.head
+    		self.head = new_element
+    		self.head.next = next
+    	else:
+    		self.head = new_element
+    def delete_first(self):
+    	if self.head:
+    		self.head = self.head.next
 
 
-
+"""
 e1 = Element(3)
 e2 = Element(4)
 e3 = Element(5)
 e4 = Element(6)
 e5 = Element(7)
 e6 = Element(8)
-
+e7 = Element(1)
 
 ll = LinkedList(e1)
 ll.append(e2)
@@ -59,5 +69,16 @@ ll.insert(e6,3)
 #print ll.head.next.value
 #print ll.head.next.next.value
 #print ll.head.next.next.next.value
-ll.delete(8)
+
 print ll.get_position(3)
+print "Head is:", ll.head.value
+
+ll.insert_first(e7)
+
+print "New head is:",ll.head.value
+print ll.get_position(1)
+
+ll.delete_first()
+print "Final head is:",ll.head.value
+print ll.get_position(1)
+"""
