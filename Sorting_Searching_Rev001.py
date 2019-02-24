@@ -66,6 +66,7 @@ def mergeSort(nums):
 	nums2 = nums[mid:]
 
 	#pdb.set_trace()
+	# Check
 
 	mergeSort(nums1)
 	mergeSort(nums2)
