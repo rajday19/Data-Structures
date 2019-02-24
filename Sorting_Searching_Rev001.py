@@ -20,7 +20,7 @@
 	b. Space Complexity = O(n)
 
 """
-
+import pdb
 
 def bubbleSort(nums):
 	for i in range(len(nums)-1):
@@ -65,8 +65,12 @@ def mergeSort(nums):
 	nums1 = nums[0:mid]
 	nums2 = nums[mid:]
 
+	#pdb.set_trace()
+
 	mergeSort(nums1)
 	mergeSort(nums2)
+
+
 
 	i=j=k=0
 
@@ -84,6 +88,8 @@ def mergeSort(nums):
 			nums[k] = nums2[j]
 			j += 1
 			k += 1
+
+	#pdb.set_trace()
 	
 	while i<len1:
 		nums[k] = nums1[i]
