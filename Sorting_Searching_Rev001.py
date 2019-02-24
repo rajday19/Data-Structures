@@ -21,6 +21,9 @@
 
 """
 import pdb
+import logging
+
+logging.basicConfig(level = logging.DEBUG,filename='log.txt',format = '%(asctime)s   %(levelname)s:%(message)s', filemode = 'w')
 
 def bubbleSort(nums):
 	for i in range(len(nums)-1):
@@ -71,6 +74,10 @@ def mergeSort(nums):
 	mergeSort(nums1)
 	mergeSort(nums2)
 
+	logging.debug('The value of nums1 is: ')
+	logging.debug(nums1)
+	logging.debug('The value of nums2 is: ')
+	logging.debug(nums2)
 
 
 	i=j=k=0
